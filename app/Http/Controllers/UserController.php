@@ -47,11 +47,12 @@ class UserController extends Controller
     {
         //
     }
+
     public function logout(Request $req): \Illuminate\Http\JsonResponse
     {
         $req->user()->currentAccessToken()->delete();
 
-        return ApiResponse::success(null, "Logged out successfully");
+        return ApiResponse::success(null, 'Logged out successfully');
     }
 
     public function login(Request $req): \Illuminate\Http\JsonResponse
