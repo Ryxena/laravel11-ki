@@ -1,4 +1,5 @@
 #!/bin/bash
+cp .env.example .env
 composer require --dev barryvdh/laravel-ide-helper
 composer require laravel/telescope --dev
 composer install --prefer-dist --optimize-autoloader
